@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Добавление книги</title>
+    <meta charset="utf-8" />
+    <style>.field{width:180px;}</style>
+    <link rel="stylesheet" href="../styles/index.css">
+</head>
+<body>
+    <h1>Добавление книги</h1>
+     <form method="POST">
+        <label>Имя</label><br>
+        <input name="bookname" class="field" required/><br><br>
+       <label>Автор</label><br>
+        <input name="author" class="field"required/><br><br>
+        <label>Аннотация</label><br>
+        <input name="abstractname" class="field"required/><br><br>
+        <label>ISBN</label><br>
+        <input name="isbn" class="field"required/><br><br>
+        <label>Отзыв</label><br>
+        <input name="review" class="field"required/><br><br>
+        <input class = "button" type="submit" value="Добавить" />
+ </form>
+ <br/>
+ <form action="/" method="GET" style="display:inline;">
+     <input class = "button"type="submit" value="К списку книг" />
+ </form>
+</body>
+<html>

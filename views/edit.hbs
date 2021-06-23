@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Редактирование книги</title>
+    <meta charset="utf-8" />
+    <style>.field{wIdth:180px;}</style>
+      
+    <link rel="stylesheet" href="../styles/index.css">
+</head>
+<body>
+    <h1>Редактирование книг</h1>
+     <form action="/edit" method="POST">
+        <input type="hIdden" name="id" value="{{library_table.id}}" />
+        <label>Имя</label><br>
+        <input name="bookname" class="field" value="{{library_table.bookname}}"required/><br><br>
+        <label>Автор</label><br>
+        <input name="author" class="field" value="{{library_table.author}}"required/><br><br>
+        <label>Аннотация</label><br>
+        <input name="abstractname" class="field" value="{{library_table.abstractname}}"required/><br><br>
+        <label>ISBN</label><br>
+        <input name="isbn" class="field" value="{{library_table.isbn}}"required/><br><br>
+        <label>Отзыв</label><br>
+        <input name="review" class="field" value="{{library_table.review}}"required/><br><br>
+        <input class = "button" type="submit" value="Сохранить" />
+     </form>
+     <br/>
+      <form action="/" method="GET" style="display:inline;">
+     <input class = "button" type="submit" value="К списку книг" />
+     </form>
+ 
+</body>
+<html>

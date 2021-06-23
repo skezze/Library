@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список книг</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../styles/index.css">
+</head>
+<body>
+    <h1>Список книг</h1>
+    <form action="/create" method="GET" style="display:inline;">
+    <input class="button" type="submit" value="Добавить книгу" />
+    </form>
+    
+    <table align="center">
+        <tr><th>Книга</th><th>Автор</th><th>Аннотация</th><th>ИСБН</th><th>Отзыв</th><th></th></tr>
+        {{#each library_table}}
+            <tr>
+                
+                <td>{{this.bookname}}</td>
+                <td>{{this.author}}</td>
+                <td>{{this.abstractname}}</td>
+                <td>{{this.isbn}}</td>
+                <td>{{this.review}}</td>
+
+                <td>
+                     <form action="/edit/{{this.id}}" method="GET" style="display:inline;">
+                        <input class = "button" type="submit" value="Редактировать" />
+                    </form>
+                    <form action="delete/{{this.id}}" method="POST" style="display:inline;">
+                        <input class = "button" type="submit" value="       Удалить      " />
+                    </form>
+                </td>
+            </tr>
+        {{/each}}
+        
+   
+   
+    </table>
+</body>
+<html>
